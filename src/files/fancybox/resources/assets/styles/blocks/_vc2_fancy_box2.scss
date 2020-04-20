@@ -1,0 +1,185 @@
+.fancybox {
+    &.style1 {
+        .fancy-items {
+            .fancy-item {
+                @media (max-width: 1199px) {
+                    width: 100%;
+                }
+
+                &.vc-col-1 {
+                    .fancy-content {
+                        @media(min-width: 1200px) {
+                            padding: 0 85px;
+                        }
+                    }
+                }
+
+                .fancy-content {
+                    display         : flex;
+                    align-items     : center;
+                    background-color: #ffffff;
+                    margin-bottom   : 30px;
+                    transition      : all .3s ease 0s;
+
+                    &:hover {
+                        transform: translateY(-4px);
+                    }
+
+                    .fancy-icon {
+                        position    : relative;
+                        flex        : none;
+                        margin-right: 45px;
+
+                        img {
+                            width : 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    .content-wrap {
+                        flex : none;
+                        width: calc(100% - 90px);
+
+                        .fancy-title {
+                            font-size       : 20px;
+                            font-weight     : 500;
+                            color           : $second_color;
+                            font-family     : $font_family_second;
+                            margin-bottom   : 0px;
+                            border-left     : 14px solid $primary_color;
+                            padding-left    : 20px;
+                            padding-right   : 20px;
+                            padding-top     : 31px;
+                            padding-bottom  : 31px;
+                            box-shadow      : 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                            background-color: #ffffff;
+                        }
+
+                        .fancy-description {
+                            p:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style2 {
+        .fancy-items {
+            display        : flex;
+            justify-content: center;
+            flex-wrap      : wrap;
+            margin         : 0 -8px;
+
+            .fancy-item {
+                margin-bottom: 30px;
+                -ms-flex     : 0 0 33.333333%;
+                flex         : 0 0 33.333333%;
+                max-width    : 33.333333%;
+                padding      : 0 8px;
+
+                @media (max-width: 767px) {
+                    -ms-flex     : 0 0 50%;
+                    flex         : 0 0 50%;
+                    max-width    : 50%;
+                    margin-bottom: 20px;
+                }
+
+                .fancy-content {
+                    text-align      : center;
+                    width           : 240px;
+                    height          : 240px;
+                    box-shadow      : 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                    background-color: #ffffff;
+                    border-radius   : 50%;
+                    position        : relative;
+                    transition      : all .5s ease 0s;
+                    margin          : 0 auto;
+
+                    @media(min-width: 1200px) {
+                        width : 300px;
+                        height: 300px;
+                    }
+
+                    @media(max-width: 991px) {
+                        width : 190px;
+                        height: 190px;
+                    }
+
+                    @media(max-width: 767px) {
+                        width : 154px;
+                        height: 154px;
+                    }
+
+                    &:hover {
+                        background-color: $primary_color;
+                        color           : #fff;
+
+                        .content-wrap {
+
+                            .fancy-title,
+                            .fancy-description {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 991px) {
+                        margin: 0 auto;
+                    }
+
+                    .content-wrap {
+                        position : absolute;
+                        top      : 50%;
+                        width    : 100%;
+                        transform: translateY(-50%);
+                        padding  : 20px;
+
+                        .fancy-title {
+                            font-size    : 60px;
+                            line-height  : 1;
+                            color        : $primary_color;
+                            margin-bottom: 20px;
+                            font-family  : $font_family;
+
+                            @media(max-width: 991px) {
+                                font-size: 48px;
+                            }
+
+                            @media(max-width: 767px) {
+                                font-size: 38px;
+                            }
+                        }
+
+                        .fancy-description {
+                            font-size  : 16px;
+                            line-height: 1.71;
+                            color      : $second_color;
+                            font-family: $font_family_second;
+
+                            @media(max-width: 767px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                @media(min-width: 992px) {
+                    &:first-child {
+                        .fancy-content {
+                            margin: 0 auto 0 0;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .fancy-content {
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
